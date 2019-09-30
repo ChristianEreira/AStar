@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A* Pathfinding Simulation</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="error">
+        <div id="errorBox" class="trans">
+            <i class="fas fa-times"></i>
+            <p>Error</p>
+        </div>
+    </div>
+    <div id="headerL">
+        <div id="left">
+            <h2>Controls</h2>
+            <b>Left mouse: </b>Draw<br>
+            <b>Right mouse: </b>Move<br>
+            <b>Scroll or +/-: </b>Zoom<br>
+            Zoom in to see g, h, f
+        </div>
+    </div>
+    <div id="headerM">
+        <div id="mid">
+            <h1 id="title">A* Pathfinder</h1>
+            <div id="toolbar">
+                <div id="tools">
+                    <div id="brush" class="pressed">
+                        <i class="fas fa-paint-brush"></i>
+                        Draw walls
+                    </div>
+                    <div id="eraser">
+                        <i class="fas fa-eraser"></i>
+                        Eraser
+                    </div>
+                    <div id="start">
+                        <i class="far fa-flag"></i>
+                        Place start
+                    </div>
+                    <div id="end">
+                        <i class="fas fa-flag-checkered"></i>
+                        Place end
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="headerR">
+        <div id="right">
+            <h2>Options</h2>
+            <input type="checkbox" id="diag">
+            <label for="diag">Traverse diagonals</label><br>
+            <input type="checkbox" id="instant">
+            <label for="instant">Instant</label><br>
+            <div id="speedDiv">
+                <div id="speedText">
+                    <p><i class="fas fa-fast-backward"></i></p><b>Speed</b>
+                    <p><i class="fas fa-fast-forward"></i></p>
+                </div>
+                <input type="range" min="1" max="100" value="100" id="speed">
+            </div>
+            <div id="run" class="button">Start</div>
+            <div id="reset" class="button dis">Reset</div>
+            <div id="clear" class="button">Clear board</div>
+        </div>
+    </div>
+    <div id="footerR">
+        <a href="https://github.com/ChristianEreira/AStar">
+            <div id="footerRight">
+                <i class="fab fa-github"></i> View source
+            </div>
+        </a>
+    </div>
+    <canvas id="canvas" width="500" height="500" tabindex='1'></canvas>
+    <script src="main.js"></script>
+</body>
+
+</html>
